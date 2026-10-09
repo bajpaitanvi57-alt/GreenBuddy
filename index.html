@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBuddy - AI Outdoor Quests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>🌿 GreenBuddy</h2>
+        <p>Less scrolling. More exploring.</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Touch Grass, Find Joy!</h1>
+            <p>Let AI create your next little outdoor adventure.</p>
+        </section>
+
+        <section class="quest-box">
+            <h2>Create Your Outdoor Quest</h2>
+
+            <form id="questForm">
+                <label for="time">How much time do you have?</label>
+                <select id="time">
+                    <option value="5 minutes">5 minutes</option>
+                    <option value="15 minutes" selected>15 minutes</option>
+                    <option value="30 minutes">30 minutes</option>
+                    <option value="1 hour">1 hour</option>
+                </select>
+
+                <label for="mood">Choose your mood</label>
+                <select id="mood">
+                    <option value="calm and mindful">Calm 🌸</option>
+                    <option value="curious and adventurous">Curious 🔎</option>
+                    <option value="creative">Creative 🎨</option>
+                    <option value="gentle movement">Active 👟</option>
+                </select>
+
+                <label for="place">Where will you explore?</label>
+                <select id="place">
+                    <option value="a garden or balcony">Garden or balcony</option>
+                    <option value="a park">Park</option>
+                    <option value="my neighbourhood">Neighbourhood</option>
+                </select>
+
+                <button type="submit" id="generateBtn">
+                    Generate My Quest ✨
+                </button>
+            </form>
+
+            <p id="status" aria-live="polite"></p>
+
+            <div id="result" hidden>
+                <h2 id="questTitle"></h2>
+                <p id="questDescription"></p>
+                <ol id="questSteps"></ol>
+                <p id="reflection"></p>
+                <button id="completeBtn" type="button">
+                    I Completed It ✓
+                </button>
+            </div>
+        </section>
+
+        <section class="journal-box">
+            <h2>📔 My Nature Journal</h2>
+            <ul id="journal"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with 🌱 for the Touch Grass Open-Source AI Challenge.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
